@@ -1,0 +1,22 @@
+.pfp {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    aspect-ratio: square;
+}
+
+.pfp>figure>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
+    transform-origin: 50% 50%;
+    size: cover;
+    aspect-ratio: square;
+}

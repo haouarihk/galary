@@ -1,8 +1,26 @@
 .navbar {
-    background: rgba(117, 117, 117, 0.382);
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background: white;
+    align-items: center;
+    text-align: center;
+    padding: 2px 20px;
+    height: 3rem;
+    font-size: small;
+}
+
+.navbar-inner {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     padding: 2px 20px;
+    height: 3rem;
+    font-size: small;
+}
+
+.navbar-fake {
+    height: 3rem;
 }

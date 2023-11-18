@@ -1,14 +1,34 @@
+import Profile from "../../profile";
 import "./item.css";
 import { Item } from "./types";
 
 
 export default function CarouselItem(props: Item) {
-    return <div className="carousel-item">
+    const aspectRatio = props.width / props.height;
+
+    return <div className="carousel-item" style={{
+        aspectRatio: `${props.width} / ${props.height}`
+    }}>
         <figure>
-            <img src={props.image} alt="Shoes" draggable={false} />
+            <img src={props.urls.full} alt={`img-of-${props.description}`} style={
+                {
+                    background: props.color,
+                    aspectRatio: `${props.width} / ${props.height}`,
+                    contentVisibility: "auto",
+                    containIntrinsicSize: props.width / aspectRatio + "px" /* Explained in the next section. */
+                }
+            } draggable={false} />
         </figure>
         <div>
-            {props.name}
+            <Profile {...props.user} />
         </div>
+
+        <span className="open">
+            Open
+        </span>
+
+        <span className="stats">
+            {props.likes}{"<3"}
+        </span>
     </div>
 }

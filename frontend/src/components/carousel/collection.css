@@ -2,26 +2,27 @@
     width: 100%;
     display: flex;
     /* grid-template-columns: 1fr 1fr 1fr; */
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 0.9rem;
+    padding-top: 1rem;
+    gap: 0.4rem;
+    max-width: 1400px;
 }
 
 .carousel-collection {
     width: 100%;
     display: flex;
-    padding: 1rem;
     justify-content: center;
 }
 
 @media only screen and (max-width: 800px) {
-    /* .carousel-collection-inner {
-        grid-template-columns: 1fr 1fr;
-    } */
+    .carousel-collection-inner {
+        gap: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-    /* .carousel-collection-inner {
-        grid-template-columns: 1fr;
-    } */
+    .carousel-collection-inner {
+        gap: 0.9rem;
+    }
 }
