@@ -1,14 +1,20 @@
+import moment from "moment";
 import Profile from "../../profile";
 import "./item.css";
 import { Item } from "./types";
+import { nFormatter } from "../../util";
 
 
-export default function CarouselItem(props: Item) {
+export default function CarouselItem(props: Item & { onSelect?: Function }) {
     const aspectRatio = props.width / props.height;
 
-    return <div className="carousel-item" style={{
-        aspectRatio: `${props.width} / ${props.height}`
-    }}>
+    return <div
+        className="carousel-item"
+        style={{
+            aspectRatio: `${props.width} / ${props.height}`
+        }}
+        onClick={() => props.onSelect?.()}
+    >
         <figure>
             <img src={props.urls.full} alt={`img-of-${props.description}`} style={
                 {
@@ -19,8 +25,18 @@ export default function CarouselItem(props: Item) {
                 }
             } draggable={false} />
         </figure>
-        <div>
-            <Profile {...props.user} />
+        <div className="carousel-info">
+            <div className="carousel-quick-stats">
+                <div>
+                    {moment(props.created_at).fromNow()}
+                </div>
+                <div>
+                    {nFormatter(props.likes, 1)} Like{props.likes != 1 ? "s" : ""}
+                </div>
+                <div>
+                    <Profile {...props.user} sm />
+                </div>
+            </div>
         </div>
 
         <span className="open">

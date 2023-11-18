@@ -1,6 +1,6 @@
 .profile-sm {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .4rem;
     aspect-ratio: square;
 }

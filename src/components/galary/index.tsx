@@ -5,7 +5,7 @@ import axios from "axios";
 import "./galary.css"
 
 export default function Galary() {
-    const [page, setPage] = useState(0)
+    const [page, setPage] = useState(1)
     const [items, setItems] = useState<Item[]>([])
     const [loading, setLoading] = useState(false);
 
@@ -23,5 +23,6 @@ export default function Galary() {
     return <div className="">
         <div className="header-title">Community Feed</div>
         <CarouselCollection items={items} reachedEnd={() => { setPage(p => p + 1) }} loading={loading} />
+
     </div>
 }

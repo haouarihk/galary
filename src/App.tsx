@@ -1,5 +1,6 @@
 
 import './App.css';
+import './components/modal/style.css';
 import Galary from './components/galary';
 import Navbar from './components/navbar';
 
