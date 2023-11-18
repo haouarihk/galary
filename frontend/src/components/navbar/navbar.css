@@ -1,0 +1,8 @@
+.navbar {
+    background: rgba(117, 117, 117, 0.382);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2px 20px;
+}

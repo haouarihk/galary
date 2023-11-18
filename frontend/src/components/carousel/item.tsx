@@ -1,17 +1,14 @@
 import "./item.css";
+import { Item } from "./types";
 
 
-export default function CarouselItem(props: {
-    name: string,
-    image: string,
-    collection: string
-}) {
+export default function CarouselItem(props: Item) {
     return <div className="carousel-item">
         <figure>
-            <img src={props.image} alt="Shoes" />
+            <img src={props.image} alt="Shoes" draggable={false} />
         </figure>
         <div>
-            Test
+            {props.name}
         </div>
     </div>
 }

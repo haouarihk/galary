@@ -1,14 +1,8 @@
-export default function CarouselItem(props: {
-    name: string,
-    image: string,
-    collection: string
-}) {
-    return <div className="carousel-item">
-        <figure>
-            <img src={props.image} alt={`image-of-${props.name}`} />
-        </figure>
-        <div>
-            Test2
-        </div>
-    </div>
+import "./navbar.css"
+
+export default function Navbar() {
+    return <header className="navbar">
+        <h1>Galary</h1>
+        <div>Item here</div>
+    </header>
 }
