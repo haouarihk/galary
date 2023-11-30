@@ -1,1 +1,39 @@
-.modal-galary {}
+.modal-galary {
+    display: flex;
+    width: 100%;
+
+}
+
+.modal-galary-image {
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-galary-image>img {
+    height: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.modal-galary-details {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    padding: .5rem;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.border-b-2 {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.277);
+}
+
+.max-w-min {
+    max-width: min-content;
+}
+
+.p-2 {
+    padding: 20px;
+}

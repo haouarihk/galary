@@ -28,13 +28,15 @@ export default function CarouselItem(props: Item & { onSelect?: Function }) {
         <div className="carousel-info">
             <div className="carousel-quick-stats">
                 <div>
-                    {moment(props.created_at).fromNow()}
+                    {nFormatter(props.likes, 1)} Like{props.likes !== 1 ? "s" : ""}
                 </div>
+
                 <div>
-                    {nFormatter(props.likes, 1)} Like{props.likes != 1 ? "s" : ""}
-                </div>
-                <div>
-                    <Profile {...props.user} sm />
+                    <Profile {...props.user} sm>
+                        <div>
+                            {moment(props.created_at).fromNow()}
+                        </div>
+                    </Profile>
                 </div>
             </div>
         </div>

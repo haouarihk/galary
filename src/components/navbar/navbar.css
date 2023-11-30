@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    z-index: 9999;
+    z-index: 30;
     width: 100%;
     background: white;
     align-items: center;

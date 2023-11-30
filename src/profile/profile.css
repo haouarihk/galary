@@ -4,3 +4,9 @@
     gap: .4rem;
     aspect-ratio: square;
 }
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
